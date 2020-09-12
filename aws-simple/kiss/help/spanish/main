@@ -1,0 +1,18 @@
+
+ Esta herramienta usa un repositorio interno para actualizarse,
+ tocarlo puede romper el comando `update` (ahi usas `fix-repo`)
+
+ 
+ Esto comandos requieren el prefijo `kiss`
+
+     info        Informacion sobre la herramienta y ajustes
+     update      Actualizar la herramienta (usara `git pull`)
+     fix-repo    Descarga y arregla el repositorio (usara `git clone`)
+     language    Cambiar el lenguaje
+
+
+ Por ahora, los siguientes no requieren del prefijo `kiss`,
+ ejecutalos para ver la lista de comandos
+
+     s3      Simple Storage Service
+

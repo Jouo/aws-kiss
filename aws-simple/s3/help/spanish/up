@@ -1,0 +1,27 @@
+
+ Parametros entre brackets [] son opcionales
+
+ Uso:  s3 up [-r] LOCAL [NUBE]
+
+     -r      Carga recursiva, archivos dentro de carpetas
+     lOCAL   Ubicacion local del contenido a subir
+     NUBE    Ubicacion destino en la nube para el contenido
+
+
+ Agrega un slash (/) al final de los nombres de carpetas
+
+ ________________________________________________________
+ 
+
+ Carga un archivo al directorio base
+ s3 up respaldo.rar
+
+ Carga un archivo a un directorio especifico
+ s3 up cilantro_cafe.mp4 videos/canada/
+
+ Carga todo dentro de una carpeta
+ s3 up -r notas/
+
+ Carga un archivo a un directorio y lo renombra
+ s3 up viejo-nombre.png fotos/nuevo-nombre.png
+

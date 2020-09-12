@@ -1,0 +1,21 @@
+# PLEASE DO NOT ENTER ANY NEW LINES OR DELETE BLANK SPACES,
+# IGNORING TO DO SO WILL BREAK THE SCRIPT AND YOU MAY
+# ALSO LOSE YOUR SETTINGS UPON UPDATING.
+
+
+
+
+
+
+[version]
+0.8.8
+
+[repository-url]
+https://github.com/Jouo/aws-kiss
+
+[repository-location]
+/usr/local/aws-simple/repository
+
+[language]
+english
+

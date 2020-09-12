@@ -1,0 +1,28 @@
+
+ Parameters between brackets [] are optional
+ 
+ Usage:  s3 rm [-r] CONTENT
+
+     -r         Recursive removal, files inside directories
+     CONTENT    Path to S3 content to remove
+
+
+ WARNING: 
+ To delete everything from the base directory, pass a dot (.) 
+ as the argument while on recursive mode
+     
+ ________________________________________________________
+
+ 
+ Delete everything from the base directory
+ s3 rm -r .
+
+ Delete a file from the base directory
+ s3 rm temporal.bin
+
+ Delete a file from a specific directory
+ s3 rm images/background.jpeg
+
+ Delete a directory (will delete the 2020 directory)
+ s3 rm -r backup/2020/
+ 

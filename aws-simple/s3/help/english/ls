@@ -1,0 +1,16 @@
+
+ Parameters between brackets [] are optional
+ 
+ Usage:   s3 ls [-r] [PATH]
+
+     -r      Recursive listing, files inside directories
+     PATH    Path to S3 content
+
+ ________________________________________________________
+
+
+ Recursively list everything inside the S3 bucket
+ s3 ls -r 
+
+ List contents of an specific directory
+ s3 ls pictures/canada/

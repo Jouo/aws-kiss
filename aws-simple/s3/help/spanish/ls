@@ -1,0 +1,17 @@
+
+ Parametros entre brackets [] son opcionales 
+ 
+ Uso:  s3 ls [-r] [UBICACION]
+
+     -r          Listado recursivo, archivos dentro de carpetas
+     UBICACION   Ubicacion del contenido en S3
+     
+ ________________________________________________________
+
+
+ Listar recursivamente todo dentro del S3 bucket
+ s3 ls -r
+ 
+ Listar contenido de un directorio especifico
+ s3 ls fotos/canada/
+

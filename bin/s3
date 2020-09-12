@@ -1,0 +1,59 @@
+#!/bin/bash
+
+DIR="/usr/local/aws-simple"
+
+# loading variables and functions
+source $DIR"/kiss/libraries/utilities.sh"
+source $DIR"/s3/libraries/general.sh"
+
+# Check for required settings
+s3-setup
+
+if [ $# -eq 0 ]; then
+    show-help s3 main $language
+    exit 1
+fi
+
+command=$1
+arguments=$(get-arguments "$@")
+
+case $command in
+
+    "up")
+        execute-command s3 up "$arguments"
+    ;;
+
+    "dl")
+        execute-command s3 dl "$arguments"
+    ;;
+
+    "mv")
+        execute-command s3 mv "$arguments"
+    ;;
+
+    "url")
+        execute-command s3 url "$arguments"
+    ;;
+
+    "ls")
+        execute-command s3 ls "$arguments"
+    ;;
+
+    "rm")
+        execute-command s3 rm "$arguments"
+    ;;
+
+    "mkdir")
+        execute-command s3 mkdir "$arguments"
+    ;;
+
+    "config")
+        execute-command s3 config "$arguments"
+    ;;
+
+    *)
+        unknown-command s3 $command $language
+    ;;
+
+esac
+

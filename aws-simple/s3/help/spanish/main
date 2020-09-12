@@ -1,0 +1,16 @@
+
+ Para informacion detallada, usa -h como unico argumento de un comando
+
+ Uso:     s3 COMANDO [ARGUMENTOS]
+ Ejemplo: s3 up documento.rar
+
+     ls      Lista el contenido de un directorio en S3
+     url     Crea un url temporal para acceder a un contenido
+     up      Carga contenido a S3
+     dl      Descarga contenido de S3
+     mv      Mueve contenido dentro de S3
+     rm      Borra contenido de S3
+     mkdir   Crea una nueva carpeta en S3
+    
+     config  Configuracion de la herramienta S3
+

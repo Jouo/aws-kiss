@@ -1,0 +1,8 @@
+
+ Usage:   s3 config COMMAND
+ Example: s3 config info
+
+     info        Displays the current configuration
+     bucket      Changes the s3 bucket
+     storage     Changes the storage type
+    

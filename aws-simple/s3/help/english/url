@@ -1,0 +1,20 @@
+
+ Parameters between brackets [] are optional
+  
+ Usage:  s3 url FILE [TIME]
+
+     FILE    S3 file directory path
+     TIME    Expiration time in seconds (3600 by default)
+
+
+ Does not work for directories, it must be a single file
+
+ ________________________________________________________
+
+
+ Create url to file for 5 minutes
+ s3 url scripts/setup.sh 300
+
+ Create url to file with default time
+ s3 url videos/october.mp4
+

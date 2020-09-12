@@ -1,0 +1,20 @@
+
+ Parametros entre brackets [] son opcionales
+
+ Uso:  s3 url ARCHIVO [TIEMPO]
+
+     ARCHIVO  Ubicacion del archivo en S3
+     TIEMPO   Tiempo de expiracion en segundos (3600 por defecto)
+    
+
+ No funciona con carpetas, debe ser un solo archivo
+
+ ________________________________________________________
+
+
+ Crear url para un archivo por 5 minutos
+ s3 url scripts/setup.sh 300
+
+ Crear url para un archivo con el tiempo por defecto
+ s3 url videos/octubre.mp4
+

@@ -1,0 +1,18 @@
+
+ Parametros entre brackets [] son opcionales
+
+ Uso:  s3 dl [-r] NUBE [LOCAL]
+
+     -r      Descarga recursiva, archivos dentro de carpetas
+     NUBE    Ubicacion del contenido en S3
+     LOCAL   Ubicacion local de destino
+
+ ________________________________________________________
+
+
+ Descarga contenido de un carpeta hacia una ubicacion local
+ s3 dl -r fotos/ /home/usuario/fotos/
+
+ Descarga un archivo de S3 a la ubicacion actual
+ s3 dl videos/paisaje.mp4
+

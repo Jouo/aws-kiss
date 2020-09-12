@@ -1,0 +1,18 @@
+
+ Parameters between brackets [] are optional
+
+ Usage:  s3 dl [-r] CLOUD [LOCAL]
+
+     -r      Recursive download, files inside directories
+     CLOUD   Directory path to S3 content
+     LOCAL   Destination path (local directory)
+
+ ________________________________________________________
+ 
+
+ Download content from an S3 directory into a local directory
+ s3 dl -r kitten-pics/ /home/user/pictures/
+
+ Download an S3 file to current location
+ s3 dl videos/birthday.mp4
+

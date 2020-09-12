@@ -1,0 +1,28 @@
+
+ Parameters between brackets [] are optional
+
+ Usage:  s3 mv [-r] ORIGIN DESTINATION
+
+     -r            Recursive move, files inside directories    
+     ORIGIN        Target S3 content to move
+     DESTINATION   S3 destination to place contents
+
+
+ A dot (.) as an argument will point to the root directory
+ Add an slash (/) at the end of directory names
+
+ ________________________________________________________
+
+
+ Move a file in the base directory to another directory
+ s3 mv breath.mp4 music/breaking-benjamin/
+
+ Move a file inside a directory to the base directory
+ s3 mv notes/recipe.txt .
+
+ Move everythin inside a directory to somewhere else
+ s3 mv -r photos/march/ photos/family/
+
+ Using the move command ro rename a file
+ s3 mv old-name.png new-name.png
+

@@ -1,0 +1,18 @@
+
+ This tool uses an internal repository which is needed for updating,
+ messing with it may break the `update`command (then use `fix-repo`)
+
+
+ The following commands require the prefix `kiss`
+ 
+     info        Information about the tool and settings
+     update      Run update for this tool (uses `git pull`)
+     fix-repo    Download and fix the repository (uses `git clone`)
+     language    Change the language
+
+
+ As of now, the following do not require the prefix `kiss`
+ run them to see a list of commands
+
+     s3      Simple Storage Service
+

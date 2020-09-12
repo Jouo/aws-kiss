@@ -1,0 +1,27 @@
+
+ Parameters between brackets [] are optional
+ 
+ Usage:  s3 up [-r] LOCAL [CLOUD]
+
+     -r      Recursive upload, files inside directories    
+     LOCAL   Local content to be uploaded
+     CLOUD   Cloud directory path to place files
+
+
+ Add an slash (/) at the end of directory names
+
+ ________________________________________________________
+
+
+ Upload a file to the base directory
+ s3 up backup.rar
+
+ Upload a file to an specific directory
+ s3 up cilantro_cafe.mp4 videos/canada/
+
+ Upload directory contents
+ s3 up -r notes/
+
+ Upload a file to a directory and renames it
+ s3 up old-name.png pictures/new-name.png
+

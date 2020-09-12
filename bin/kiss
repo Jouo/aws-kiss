@@ -1,0 +1,41 @@
+#!/bin/bash
+
+DIR="/usr/local/aws-simple"
+
+# loading variables and functions
+source $DIR"/kiss/libraries/utilities.sh"
+source $DIR"/kiss/libraries/general.sh"
+
+# Checker for required settings
+kiss-setup
+
+if [ $# -eq 0 ]; then
+    show-help kiss main $language
+    exit 1
+fi
+
+command=$1
+arguments=$(get-arguments "$@")
+
+case $command in
+
+    "info")
+        kiss-info
+    ;;
+
+    "update")
+    ;;
+
+    "fix-repo")
+    ;;
+
+    "language")
+        kiss-set-language
+    ;;
+
+    *)
+        unknown-command kiss $command $language
+    ;;
+
+esac
+

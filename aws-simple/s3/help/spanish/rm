@@ -1,0 +1,28 @@
+
+ Parametros entre brackets [] son opcionales
+
+ Uso:  s3 rm [-r] CONTENIDO
+
+     -r          Eliminado recursivo, archivos dentro de carpetas
+     CONTENIDO   Ubicacion del contenido a eliminar
+
+
+ ADVERTENCIA:
+ Para borrar todo del directorio principal, pasa un punto (.)
+ como argumento mientras usas el modo recursivo
+  
+ ________________________________________________________    
+
+
+ Borrar todo del directorio principal
+ s3 rm -r .
+
+ Borrar un archivo en el directorio principal
+ s3 rm temporal.bin
+
+ Borrar un archivo dentro de una carpeta
+ s3 rm images/background.jpeg
+
+ Borrar una carpeta (borrara la carpeta llamada 2020)
+ s3 rm -r backup/2020/
+ 

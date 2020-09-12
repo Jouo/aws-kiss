@@ -1,0 +1,15 @@
+
+ Uso:  s3 mkdir DIRECTORIO
+
+     DIRECTORIO   Nombre del nuevo directorio 
+                  (puede ser una ubicacion)
+         
+ ________________________________________________________
+
+
+ Crea un nuevo directorio
+ s3 mkdir respaldo
+
+ Crea un nuevo directorio en una ubicacion especifica
+ s3 mkdir videos/vacaciones/playa
+

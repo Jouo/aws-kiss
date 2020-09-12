@@ -1,0 +1,16 @@
+
+ For detailed information, pass -h as the only argument in a command
+
+ Usage:   s3 COMMAND [ARGUMENTS]
+ Example: s3 up document.rar
+
+     ls      List contents from an S3 directory
+     url     Creates a temporal url to retrieve a file
+     up      Upload content into s3
+     dl      Download content from S3
+     mv      Move content inside S3
+     rm      Remove content from S3
+     mkdir   Creates a new directory in S3
+    
+     config  Configuration for the S3 tool
+

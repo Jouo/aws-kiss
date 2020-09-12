@@ -1,0 +1,28 @@
+
+ Parametros entre brackets [] son opcionales
+
+ Uso:  s3 mv [-r] ORIGEN DESTINO
+
+     -r           Movido recursivo, archivos dentro de carpetas
+     ORIGEN       Contenido en S3 para mover
+     DESTINO      Ubicacion en S3 donde colocar contenido
+
+
+ Un punto (.) como argumento apuntara hacia el directorio principal
+ Agrega un slash (/) al final de los nombres de carpetas
+
+ ________________________________________________________
+
+
+ Mover un archivo en el directrio base hacia otra carpeta
+ s3 mv breath.mp4 musica/breaking-benjamin/
+
+ Mover un archivo dentro de una carpeta hacia el directorio base
+ s3 mv notas/receta.txt .
+
+ Mover todo dentro de una carpeta hacia otro lugar
+ s3 mv -r fotos/marzo/ fotos/familia/
+
+ Usar el comando de mover para renombrar un archivo
+ s3 mv viejo-nombre.png nuevo-nombre.png
+

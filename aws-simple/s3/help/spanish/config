@@ -1,0 +1,8 @@
+
+ Uso:     s3 config COMANDO
+ Ejemplo: s3 config info
+
+     info        Muestra la configuracion actual
+     bucket      Cambia el s3 bucket
+     storage     Cambia el tipo de almacenamiento
+    
