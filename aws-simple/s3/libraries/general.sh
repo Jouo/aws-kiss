@@ -29,14 +29,13 @@ function s3-setup() {
 
 function s3-info() {
     echo """
- Bucket     - $bucket
- S3 Storage - $storage
+ Bucket     - $(s3-get-bucket)
+ S3 Storage - $(s3-get-storage)
 """
 }
 
 
 # Variables given when sourcing this script
-
 storage=$(s3-get-storage)
 bucket=$(s3-get-bucket)
 url=$(s3-get-url)

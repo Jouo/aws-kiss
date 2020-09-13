@@ -2,6 +2,7 @@
 
 DIR="/usr/local/aws-simple"
 kissLIBRARY=$DIR"/kiss/libraries"
+kissSCRIPTS=$DIR"/kiss/scripts"
 
 # Loading variables and functions
 source $kissLIBRARY"/configuration.sh"
@@ -23,10 +24,9 @@ function kiss-setup() {
 
 function kiss-info() {
     style-points
-    version=$(kiss-get-version)
     echo """
- Version  - $version
- Language - $language
+ Version  - $(kiss-get-version)
+ Language - $(kiss-get-language)
 """
 }
 
@@ -35,14 +35,20 @@ function kiss-info() {
 # you should watch them if you haven't.
 
 function style-points() {
-
-    version=$(kiss-get-version)
 echo '   __ ___      _____           _  __  _   ___   ___'
 echo '  / _` \ \ /\ / / __|   ___   | |/ / | | / __| / __|'
 echo ' | (_| |\ V  V /\__ \  |___|  |   <  | | \__ \ \__ \'
 echo '  \__,_| \_/\_/ |___/         |_|\_\ |_| |___/ |___/'
 echo
 echo '  Amazon Web Services  -----  Keep it simple, stupid'
+}
+
+
+# Runs kiss updater
+
+function kiss-update() {
+    source $kissSCRIPTS"/update.sh"
+    main
 }
 
 
