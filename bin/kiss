@@ -28,6 +28,7 @@ case $command in
     ;;
 
     "fix-repo")
+        kiss-fix-repository
     ;;
 
     "language")

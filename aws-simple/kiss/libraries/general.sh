@@ -40,7 +40,7 @@ echo '  / _` \ \ /\ / / __|   ___   | |/ / | | / __| / __|'
 echo ' | (_| |\ V  V /\__ \  |___|  |   <  | | \__ \ \__ \'
 echo '  \__,_| \_/\_/ |___/         |_|\_\ |_| |___/ |___/'
 echo
-echo '  Amazon Web Services  -----  Keep it simple, stupid'
+echo '  Amazon Web Services  -----  Keep it stupid simple'
 }
 
 
@@ -51,6 +51,13 @@ function kiss-update() {
     main
 }
 
+
+# Runs internal repository fix
+
+function kiss-fix-repository() {
+    source $kissSCRIPTS"/fix-repo.sh"
+    main
+}
 
 # Variables given when sourcing this script
 language=$(kiss-get-language)

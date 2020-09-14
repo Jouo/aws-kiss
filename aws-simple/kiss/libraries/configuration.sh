@@ -65,7 +65,7 @@ Enter a number: """
     read input
     clear
 
-    if [ $input -ge 1 ] && [ $input -le 2 ]; then
+    if [ -n "$input" ] && [ $input -ge 1 ] && [ $input -le 2 ]; then
 
         case $input in
 

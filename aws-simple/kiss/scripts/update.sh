@@ -22,7 +22,7 @@ SERVICES=$(ls $kissRepoPATH"/bin")
 function main() {
 
 # 1) Pull any changes from the repository
-#update-repository
+update-repository
 
 # 2) Check current version and repository version
 compare-versions
@@ -58,32 +58,21 @@ kiss
 # Updates the internal repository
 
 function update-repository() {
-    # 0 = Everything is okay
-    # 1 = Problem in the repository
-    # 2 = Directory doesn't exist
-    status=$(pull-repository)
-
-    if [ $status -eq 1 ]; then
-        echo "There's a problem updating the repository."
-        echo "If the problem persists run: \`kiss fix-repo\`"
-        exit 1
-    elif [ $status -eq 2 ]; then
-        echo "Repository doesn't exist, run: \`kiss fix-repo\`"
-        exit 2
+    if [ -d $kissRepoPATH ]; then
+        $(pull-repository) 2> /dev/null
+    else
+        echo "Internal repository not found, please run: \`kiss fix-repo\`"
     fi
 }
 
 
-# Attempt to pull git repository changes
+# Attempt to pull git repository changes,
+# it has to be done this way to avoid
+# changing directories in the CLI
 
 function pull-repository() {
-    if [ -d $kissRepoPATH ]; then
         cd $kissRepoPATH
-        git pull &> /dev/null
-        echo $?
-    else
-        echo 2
-    fi
+        sudo git pull &> /dev/null
 }
 
 
@@ -196,7 +185,13 @@ function place-new-files() {
 # Give all permissions, because why not
 
 function setup-permissions() {
-    sudo chmod -R 777 $DIR
+    sudo chmod 777 $DIR
+    directories=$(ls $DIR -I "repository")
+
+    for directory in ${directories[@]}; do
+        sudo chmod -R 777 $DIR/$directory
+    done
+
     for service in ${SERVICES[@]}; do
         sudo chmod 777 $BIN/$service
     done

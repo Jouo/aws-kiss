@@ -36,7 +36,7 @@ function s3-set-bucket() {
     read input
     clear
 
-    if [ -n "$bucket" ]; then
+    if [ -n "$input" ]; then
         sed -i $s3BUCKET's,.*,'$input',' $s3SETTINGS
     else
         echo "Bucket can't be left empty"
@@ -59,7 +59,7 @@ Enter a number: """
     read input
     clear
 
-    if [ $input -ge 1 ] && [ $input -le 4 ]; then
+    if [ -n "$input" ] && [ $input -ge 1 ] && [ $input -le 4 ]; then
 
         case $input in
 
